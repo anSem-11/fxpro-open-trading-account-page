@@ -1,0 +1,288 @@
+@import '~styles/mixins/index';
+
+.open-trading-account-why {
+  padding: var(--spacing-5xl) 0;
+
+  background-color: var(--background-cards);
+
+  @include tablet {
+    padding: var(--spacing-10xl) 0 var(--spacing-9xl);
+  }
+
+  @include desktop {
+    padding: var(--spacing-10xl) 0;
+  }
+
+  .container {
+    padding: 0;
+
+    @include tablet {
+      padding-left: var(--container-padding);
+    }
+
+    @include largeDesktop {
+      padding-right: var(--container-padding);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-2xl);
+
+    margin-bottom: var(--spacing-2xl);
+
+    @include tablet {
+      gap: 0;
+
+      flex-direction: row-reverse;
+      align-items: flex-start;
+
+      margin-bottom: var(--spacing-5xl);
+
+      @include rtl {
+        flex-direction: row;
+      }
+    }
+
+    @include largeDesktop {
+      position: relative;
+
+      flex-direction: row;
+      justify-content: flex-start;
+
+      margin-bottom: var(--spacing-7xl);
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+
+    margin: 0 auto;
+
+    width: 100%;
+    height: 181px;
+
+    background: url("https://direct-website.azureedge.net/assets/img/pages/open-trading-account/why/computer-img@900w.webp") no-repeat center/contain;
+
+    @include tablet {
+      margin: 0;
+
+      width: 427px;
+      height: 420px;
+
+      background: url("https://direct-website.azureedge.net/assets/img/pages/open-trading-account/why/computer-img-tablet@900w.webp") no-repeat center/cover;
+    }
+
+    @include largeDesktop {
+      position: absolute;
+      right: -42px;
+
+      width: 742px;
+      height: 420px;
+
+      background: url("https://direct-website.azureedge.net/assets/img/pages/open-trading-account/why/computer-img@1800w.webp") no-repeat center/cover;
+
+      @include rtl {
+        right: unset;
+        left: -42px;
+      }
+    }
+  }
+
+  &__img-container {
+    position: absolute;
+    top: -95px;
+    left: -14px;
+
+    width: 147px;
+    height: 147px;
+
+    @include tablet {
+      top: -107px;
+      left: -52px;
+
+      width: 223px;
+      height: 223px;
+    }
+
+    @include largeDesktop {
+      top: -107px;
+      right: -45px;
+      left: unset;
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      display: block;
+
+      width: 18.72px;
+      height: 22.18px;
+
+      background: url('https://direct-website.azureedge.net/assets/img/pages/open-trading-account/why/F-icon.svg') no-repeat center/contain;
+
+      transform: translate(-50%, -50%);
+
+      @include tablet {
+        width: 28.7px;
+        height: 34px;
+      }
+    }
+  }
+
+  &__circle-label {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    animation: rotate-circle 35s linear infinite;
+  }
+
+  @keyframes rotate-circle {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  &__text-blocks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin: 0 auto;
+
+    padding: 0 var(--container-padding);
+
+    width: 100%;
+    gap: 10px;
+
+    @include tablet {
+      padding: 0;
+
+      width: 100%;
+      max-width: 367px;
+      gap: var(--spacing-l);
+    }
+
+    @include desktop {
+      margin: 0;
+
+      max-width: 470px;
+      gap: var(--spacing-2xl);
+    }
+  }
+
+  &__subtitle {
+    padding: var(--spacing-m) var(--spacing-2xl);
+
+    width: 267px;
+
+    background-color: var(--background-primary);
+
+    color: var(--background-accent);
+    font-size: var(--font-size-semi-2xl);
+    font-weight: var(--font-weight-600);
+    line-height: 30px;
+
+    @include tablet {
+      width: 300px;
+    }
+  }
+
+  &__description {
+    padding: var(--spacing-m) var(--spacing-2xl);
+
+    width: 247px;
+
+    background-color: var(--background-accent);
+
+    color: var(--background-primary);
+
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-500);
+
+    line-height: 21px;
+    align-self: flex-end;
+
+    @include tablet {
+      width: 270px;
+    }
+  }
+
+  &__info {
+    padding: var(--spacing-m) var(--spacing-2xl);
+
+    width: 100%;
+
+    background-color: var(--background-accent);
+
+    color: var(--background-primary);
+
+    font-size: var( --font-size-l);
+    font-weight: var(--font-weight-600);
+    line-height: 24px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+
+    list-style-type: none;
+    flex-flow: row wrap;
+    gap: var(--spacing-l);
+
+    @include tablet {
+      padding: 0;
+      padding-right: var(--container-padding);
+      gap: var(--spacing-m);
+    }
+
+    @include desktop {
+      justify-content: flex-start;
+
+      padding-right: 0;
+      gap: var(--spacing-2xl);
+    }
+  }
+
+  &__item {
+    padding: var(--spacing-s) 0;
+
+    border-top: 1px solid var(--grey-cards-border);
+
+    width: 46%;
+
+    @include tablet {
+      width: 31%;
+    }
+
+    @include desktop {
+      width: 170px;
+    }
+
+    p {
+      max-width: 170px;
+
+      color: var(--background-alternative);
+      font-size: var(--font-size-m);
+      line-height: 21px;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import '~styles/mixins/index';
+
+:root {
+  /** Text color */
+  --grey-cards-border: #CCD4D7;
+}
+
+.ui-hero {
+  &_open-trading-account {
+    padding: var(--spacing-5xl) 0 102px;
+
+    color: var(--background-alternative);
+
+    @include tablet {
+      padding: var(--spacing-10xl) 0;
+    }
+
+    .ui-hero__title {
+      margin-bottom: var(--spacing-l);
+
+      color: var(--background-alternative);
+      font-size: var(--font-size-3xl);
+
+      @include tablet {
+        font-size: var(--font-size-5xl);
+      }
+    }
+
+    .g-hero-description {
+      margin: 0;
+
+      max-width: 100%;
+
+      font-size: var(--font-size-semi-2xl);
+      line-height: 34.5px;
+
+      a {
+        text-decoration: underline;
+
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.achievements {
+  padding-top: var(--spacing-5xl);
+
+  @include tablet {
+    padding-top: var(--spacing-10xl);
+  }
+}

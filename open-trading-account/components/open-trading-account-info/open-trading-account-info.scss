@@ -1,0 +1,161 @@
+@import '~styles/mixins/index';
+
+.open-trading-account-info {
+  padding: var(--spacing-5xl) 0;
+
+  @include tablet {
+    padding: var(--spacing-10xl) 0 var(--spacing-10xl);
+  }
+
+  @include desktop {
+    padding-top: var(--spacing-5xl);
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto var(--spacing-5xl);
+
+    padding: var(--spacing-2xl) 0;
+
+    background-color: var(--background-cards);
+
+    list-style-type: none;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-m);
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      margin-bottom: var(--spacing-10xl);
+      padding: var(--spacing-5xl) 0;
+      gap: var(--spacing-l);
+    }
+
+    @include desktop {
+      gap: var(--spacing-2xl);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 var(--spacing-s);
+
+    width: 100%;
+    gap: var(--spacing-m);
+
+    @include tablet {
+      padding: 0;
+
+      max-width: 238px;
+    }
+
+    @include desktop {
+      max-width: 370px;
+    }
+  }
+
+  &__link-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: var(--spacing-s) var(--spacing-2xl);
+
+    height: 78px;
+
+    background-color: var(--background-primary);
+
+    cursor: pointer;
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover a {
+      text-decoration: none;
+    }
+
+    [lang="ms"] & {
+      height: 92px;
+    }
+
+    @include tablet {
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      &:last-of-type {
+        height: 102px;
+
+        [lang="ms"] & {
+          height: 117px;
+        }
+
+        [lang="id"] & {
+          height: 104px;
+        }
+      }
+    }
+
+    @include desktop {
+      &:last-of-type {
+        height: 78px;
+
+        [lang="ms"] & {
+          height: 92px;
+        }
+      }
+    }
+
+    a {
+      width: 100%;
+      max-width: 240px;
+
+      color: var(--background-alternative);
+      font-size: var(--font-size-l);
+      font-weight: var(--font-weight-600);
+      text-decoration: underline;
+
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  &__title {
+    margin: 0 auto var(--spacing-2xl);
+
+    max-width: 100%;
+
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-600);
+    line-height: var(--line-height-120);
+    text-align: center;
+
+    @include tablet {
+      max-width: 754px;
+    }
+
+    @include desktop {
+      max-width: 570px;
+    }
+  }
+
+  &__button {
+    display: block;
+
+    text-align: center;
+
+    .ui-button-layout_l {
+      width: 290px;
+    }
+  }
+}

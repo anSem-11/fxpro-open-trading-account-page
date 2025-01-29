@@ -1,0 +1,143 @@
+@import '~styles/mixins/index';
+
+.open-trading-account-mobile {
+  padding: var(--spacing-5xl) 0;
+
+  @include tablet {
+    padding: var(--spacing-10xl) 0 226px;
+  }
+
+  @include desktop {
+    padding: var(--spacing-10xl) 0;
+  }
+
+  .container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-5xl);
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      padding-left: 0;
+
+      @include rtl {
+        flex-direction: row-reverse;
+      }
+    }
+
+    @include desktop {
+      gap: var(--spacing-10xl);
+
+      justify-content: center;
+
+      padding-left: var(--container-padding);
+    }
+  }
+
+  &__img {
+    width: 234px;
+    height: 298.97px;
+
+    background: url("https://direct-website.azureedge.net/assets/img/pages/open-trading-account/mobile/phones-img-mob.webp") no-repeat center/contain;
+
+    @include tablet {
+      width: 376.95px;
+      height: 534px;
+
+      background: url("https://direct-website.azureedge.net/assets/img/pages/open-trading-account/mobile/phones-img-tablet.webp") no-repeat center/contain;
+    }
+
+    @include desktop {
+      width: 461px;
+      height: 589px;
+
+      background: url("https://direct-website.azureedge.net/assets/img/pages/open-trading-account/mobile/phones-img-desktop.webp") no-repeat center/contain;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2xl);
+
+    @include tablet {
+      margin-top: var(--spacing-l);
+    }
+
+    @include desktop {
+      margin-top: var(--spacing-m);
+      gap: var(--spacing-4xl);
+    }
+  }
+
+  &__description {
+    margin: 0 auto;
+    padding: var(--spacing-l);
+
+    width: 100%;
+
+    background-color: var(--background-cards);
+
+    font-size: var(--font-size-s);
+    line-height: 18px;
+
+    @include tablet {
+      position: absolute;
+      left: var(--container-padding);
+      bottom: -126px;
+
+      margin-right: var(--container-padding);
+
+      width: fit-content;
+    }
+
+    @include desktop {
+      position: relative;
+      left: unset;
+      bottom: unset;
+
+      margin: 0;
+
+      width: 470px;
+    }
+  }
+
+  .ui-rating-section__qr-wrapper {
+    padding-bottom: 0;
+
+    max-width: 100%;
+
+    @include desktop {
+      max-width: 300px;
+    }
+  }
+
+  .ui-rating-section__buttons {
+    justify-content: space-between;
+
+    margin: 0;
+
+    max-width: 300px;
+    flex-wrap: nowrap;
+
+    @media screen and (min-width: 370px) {
+      max-width: 100%;
+    }
+  }
+
+  .ui-rating-section__title-wrapper {
+    margin-bottom: var(--spacing-l);
+
+    max-width: 485px;
+
+    @include rtl {
+      max-width: 530px;
+    }
+  }
+}

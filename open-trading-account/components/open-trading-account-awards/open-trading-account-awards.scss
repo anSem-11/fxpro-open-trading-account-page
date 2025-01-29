@@ -1,0 +1,79 @@
+@import '~styles/mixins/index';
+
+.open-trading-account-awards {
+  padding: var(--spacing-4xl) 0;
+
+  @include tablet {
+    padding: var(--spacing-10xl) 0 0;
+  }
+
+  @include desktop {
+    padding-top: var(--spacing-5xl);
+  }
+
+  &__description {
+    margin: 0 auto var(--spacing-4xl);
+
+    max-width: 770px;
+
+    font-size: var(--font-size-semi-2xl);
+    font-weight: var(--font-weight-500);
+    line-height: 38.5px;
+    text-align: center;
+
+    @include tablet {
+      margin-bottom: 136px;
+    }
+
+    @include desktop {
+      margin-bottom: var(--spacing-10xl);
+    }
+  }
+
+  .ui-animated-info-box__title-container {
+    max-width: 285px;
+
+    @media screen and (min-width: 375px) {
+      max-width: 470px;
+    }
+  }
+
+  .ui-animated-info-box__description {
+    max-width: 458px;
+  }
+
+  .ui-animated-info-box {
+    margin-bottom: var(--spacing-2xl);
+
+    @include tablet {
+      margin-bottom: var(--spacing-5xl);
+    }
+  }
+
+  .ui-awards__award {
+    &:nth-child(1) {
+      img {
+        // after changing width, also change "sizes" in component
+        width: 98px;
+
+        transform: translateY(20px);
+      }
+    }
+
+    &:nth-child(2) {
+      img {
+        // after changing width, also change "sizes" in component
+        width: 106px;
+        height: 98px;
+      }
+    }
+
+    &:nth-child(3) {
+      img {
+        // after changing width, also change "sizes" in component
+        width: 98px;
+        height: 98px;
+      }
+    }
+  }
+}
